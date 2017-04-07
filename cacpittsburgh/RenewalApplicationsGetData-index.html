@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">  <!-- Required for running apps scripts  -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+
+<style>
+#inputBox {min-height: 56px; padding: 5px; margin: 0 auto; background-color: #d5e9f2; text-align: center; font: 16px Roboto}
+#monthSelected {margin-right: 8px}
+</style>
+
+</head>
+<body>
+
+<div id="inputBox">
+  Renewal apps for
+  <select id="monthSelected" name="month">
+    <option value="0" selected>Month...</option>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
+  <input type="button" id="startApps" value="Start Applications">
+  <div id="feedbackMsg"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+var mergeDocUrl = 'https://docs.google.com/spreadsheets/d/1zFtGJ14456dyTPXL_HDUVhpTKbl332ypgLaTtk3zzzz/edit#gid=0';
+$(document).ready(function() {
+  $('#startApps').click(function() {
+    // Handle submitted input
+    var monthSelectedValue = $('#monthSelected').val();
+    var monthSelectedText = $('#monthSelected option:selected').text();
+    if (monthSelectedValue != 0) {
+      // Validation passes
+      // Call server-side function "renewalAppData"; if OK, run client-side callback function
+      google.script.run.withSuccessHandler(function(numLabels) {
+        // Callback function to display success message and reset controls
+        var feedbackMessage = 'Data has been generated for ' + numLabels +
+          ' ' + monthSelectedText +
+          ' renewal applications. If the Renewal applications data spreadsheet is not opened, <a href="' + mergeDocUrl +
+          '" target="_blank">click here</a>.';
+        $('#feedbackMsg').css('color', '#090');
+        $('#feedbackMsg').html(feedbackMessage);
+        $('#monthSelected').val(0);
+      }).renewalAppData(monthSelectedValue);
+      // Additionally open doc used for mail merge & print
+      window.open(mergeDocUrl);
+    }
+    else {
+      // At least one invalid entry
+      $('#feedbackMsg').css('color', '#d00');
+      $('#feedbackMsg').html('Please select a month.');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
