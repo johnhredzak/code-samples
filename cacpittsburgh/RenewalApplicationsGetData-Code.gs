@@ -9,8 +9,8 @@ function renewalAppData(inpMonth1) {
   // Convert to zero-based month
   var inpMonth0 = +inpMonth1 - 1;
   // Active sheet: Members data table
-  var ss = SpreadsheetApp.openById("1krO0mCdnhzahEFcCClBTqds07Yv6F31tFOzdC5wzzzz");
-  var sheet = ss.getSheetByName("T_Members");
+  var ss = SpreadsheetApp.openById('1krO0mCdnhzahEFcCClBTqds07Yv6F31tFOzdC5wzzzz');
+  var sheet = ss.getSheetByName('T_Members');
   var inData = sheet.getDataRange().getValues();
   // Initialize output array
   var outData = [];
@@ -46,8 +46,8 @@ function renewalAppData(inpMonth1) {
     }
   }
   // Active sheet: Renewal applications data table
-  ss = SpreadsheetApp.openById("1zFtGJ14456dyTPXL_HDUVhpTKbl332ypgLaTtk3zzzz");
-  sheet = ss.getSheetByName("Renewal Apps");
+  ss = SpreadsheetApp.openById('1zFtGJ14456dyTPXL_HDUVhpTKbl332ypgLaTtk3zzzz');
+  sheet = ss.getSheetByName('Renewal Apps');
   sheet.clear();
   // Write data
   for (var outRow = 0; outRow < outData.length; outRow++) {
