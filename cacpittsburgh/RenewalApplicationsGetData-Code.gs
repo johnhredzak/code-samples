@@ -46,7 +46,7 @@ function renewalAppData(inpMonth1) {
     }
   }
   // Active sheet: Renewal applications data table
-  ss = SpreadsheetApp.openById("1zFtGJ14456dyTPXL_HDUVhpTKbl332ypgLaTtk3Imcc");
+  ss = SpreadsheetApp.openById("1zFtGJ14456dyTPXL_HDUVhpTKbl332ypgLaTtk3zzzz");
   sheet = ss.getSheetByName("Renewal Apps");
   sheet.clear();
   // Write data
