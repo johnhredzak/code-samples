@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="caciApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catholic Alumni Clubs International - Single, Catholic, Professional</title>
+  <meta name="description" content="An association of Catholic Alumni Clubs (CAC's) located throughout the United States. Each CAC is a local organization for professional Catholic singles providing social, recreational, athletic, travel, spiritual, charitable, cultural, and leadership opportunities.">
+  <meta name="keywords" content="Catholic, Alumni, Club, CAC, organization, association, group, join, single, singles, professional, friendship, friends, meet, people, activities, events, social, sports, travel, convention, dance, party, dinner, dining, Mass, church, charity, volunteer, community service, theater, leadership">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda One">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home"><img src="media/cac-logo-w40.png" alt="CAC Logo" style="margin-top:-13px"></a>
+    </div>
+    <div id="navbar-main" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#local-clubs">LOCAL CACs</a></li>
+        <li><a href="#membership">MEMBERSHIP</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">TRAVEL <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#travel">About</a></li>
+            <li><a href="#travel-calendar-sect">Calendar</a></li>
+            <li><a href="#this-convention">This Convention</a></li>
+            <li><a ng-href="#" data-toggle="modal" data-target="#downloadModal">Downloads</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#scholarship">Scholarship Fund</a></li>
+            <li><a href="#officers">Officers</a></li>
+            <li><a ng-href="#" data-toggle="modal" data-target="#downloadModal">Forms &amp; Downloads</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ng-href="#" data-toggle="modal" data-target="#convModal"><span class="glyphicon glyphicon-plane"></span> Convention</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /NAVBAR -->
+
+<!-- HEADER/JUMBOTRON -->
+<header>
+  <div id="home" class="jumbotron text-center">
+    <h1>Catholic Alumni Clubs International</h1>
+    <div class="subtitle-1">An association of local Catholic Alumni Clubs</div>
+    <div class="subtitle-2">Single • Catholic • Professional</div>
+    <div class="tagline">Join other Catholic singles at events in a friendly group setting. Enjoy new experiences. Meet people. Make friends.</div>
+  </div> <!-- /jumbotron -->
+</header>
+<!-- /HEADER/JUMBOTRON -->
+
+<!-- MAIN -->
+
+<div id="about" class="container-fluid">
+
+<h2>Who We Are</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <p><strong class="colored-text">Catholic Alumni Clubs International</strong> (CACI) is an association of more than 20 
+    Catholic Alumni Clubs located throughout the United States.</p>
+    <p><strong>CACI’s mission:</strong> encourage the development of local CAC’s, facilitate communication between 
+    local clubs, represent the interests of single Catholics at a national level, and host its National Convention.</p>
+  </div>
+  <div class="col-sm-6">
+    <p>A <strong class="colored-bold">Catholic Alumni Club</strong> (CAC) is a local organization of single Catholic 
+    professional men and women. Each CAC provides a friendly setting for Catholic singles to meet and develop 
+    friendships with other Catholic singles at a variety of enjoyable, interesting, and fulfilling activities.</p>
+    <div>
+      <a href="#local-clubs" class="btn btn-default" role="button">Local CAC Chapters 
+      <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+  </div>
+</div>
+
+</div> <!-- /about -->
+
+<div id="what-we-do" class="container-fluid">
+
+<h2>What We Do</h2>
+
+<h3>Events at your local CAC may include:</h3>
+<div id="activities-list" class="text-center">
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-user"></span>
+      <h4>Dances</h4>
+      <p>A favorite CAC social event.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-home"></span>
+      <h4>House/Games Parties</h4>
+      <p>Friendly, low-pressure gatherings at members’ homes. Great icebreakers.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-cutlery"></span>
+      <h4>Fine Dining</h4>
+      <p>An enjoyable evening with fellow CACers at a local restaurant.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-screenshot"></span>
+      <h4>Spiritual Replenishment</h4>
+      <p>Mass, retreats, spiritual discussions, and other events celebrating our faith.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-heart"></span>
+      <h4>Community Volunteering</h4>
+      <p>An essential element of Catholic life.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-music"></span>
+      <h4>Cultural Events</h4>
+      <p>Theatre, concerts, musicals, plays, tours, and more.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-picture"></span>
+      <h4>Sporting Events</h4>
+      <p>Volleyball, tennis, hiking, and more. Friendly interaction. Low-intensity competition.</p>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <span class="glyphicon glyphicon-tent"></span>
+      <h4>Weekend Getaways</h4>
+      <p>Skiing, camping, and other weekend trips.</p>
+    </div>
+  </div>
+</div>
+
+<h3>National Travel Opportunities:</h3>
+<div class="row">
+  <div class="col-sm-2 text-center">
+      <span class="glyphicon glyphicon-plane"></span>
+  </div>
+  <div class="col-sm-8">
+    <p>Annually, the CACI <strong>National Convention</strong> and several CAC <strong>Regional Weekends</strong> take 
+    place, where CAC members from many chapters throughout the country  join together to enjoy tours, sporting events, 
+    dinner-dances, liturgies, seminars, and parties.</p>
+    <div class="text-left">
+      <a href="#travel" class="btn btn-default" role="button">More about CAC travel 
+      <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+  </div>
+</div>
+
+</div> <!-- /what-we-do -->
+
+<div id="local-clubs" class="container-fluid">
+
+<h2>Local Catholic Alumni Clubs</h2>
+
+<h3>Check out the CAC nearest you!</h3>
+
+<div id="clubs-list" ng-controller="localclubsCtrl">
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <h4>Western Region</h4>
+      <div class="list-group">
+        <div ng-repeat="club in localclubsList | filter: {'region':'Western'}">
+          <a ng-href="{{ 'http://' + club.website }}" target="_blank" class="list-group-item" ng-if="club.website">{{ club.club }}</a>
+          <span class="list-group-item disabled"  ng-if="!club.website">{{ club.club }}</span>
+        </div>
+      </div>
+      <img class="img-responsive center-block" src="media/usa-cac.png" alt="USA-CAC" style="margin-top: 4rem">
+    </div>
+    <div class="col-sm-4">
+      <h4>Midwest Region</h4>
+      <div class="list-group">
+        <div ng-repeat="club in localclubsList | filter: {'region':'Midwest'}">
+          <a ng-href="{{ 'http://' + club.website }}" target="_blank" class="list-group-item" ng-if="club.website">{{ club.club }}</a>
+          <span class="list-group-item disabled"  ng-if="!club.website">{{ club.club }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h4>Eastern Region</h4>
+      <div class="list-group">
+        <div ng-repeat="club in localclubsList | filter: {'region':'Eastern'}">
+          <a ng-href="{{ 'http://' + club.website }}" target="_blank" class="list-group-item" ng-if="club.website">{{ club.club }}</a>
+          <span class="list-group-item disabled"  ng-if="!club.website">{{ club.club }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /clubs-list -->
+
+<p class="single-column" style="margin:1rem auto 3rem"><span class="colored-bold">Have interest in a local CAC above?</span> 
+Click/tap to go to that club’s website (if available). You may contact them from there. Or contact us: 
+<contact-button recipient="'General CACI'" button-text="Contact CACI"></contact-button></p>
+
+<h3>Don’t have a CAC near you?</h3>
+<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Our <strong>At-Large Membership</strong> enables you to be a part of the nationwide CAC community and take part
+      in its activities, including the National Convention and Regional Weekends. <a href="#at-large" 
+      class="btn btn-default" role="button">Learn more <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+    </div>
+    <div class="col-sm-6">
+      <p>Consider starting a <strong>new CAC in your area</strong>. Our Club Development Chairman 
+      <span ng-controller="contactDataCtrl">{{ getPersonField('Club Development') }}</span> will 
+      work closely with you to get a CAC in your area up and running.
+      <contact-button recipient="'Club Development'" button-text="Contact Club Development"></contact-button></p>
+    </div>
+  </div>
+</div>
+
+</div> <!-- /local-clubs -->
+
+<div id="membership" class="container-fluid">
+
+<h2>Membership in CAC</h2>
+
+<div class="row">
+  <div class="col-sm-5">
+    <img src="media/cac-events-a.jpg" class="img-responsive img-rounded center-block" alt="CAC Events" style="margin-top:3rem">
+  </div>
+  <div class="col-sm-7">
+    <h3>Why Join CAC?</h3>
+    <p class="colored-bold before-list">Join other single professional Catholics in your area, and start enjoying these benefits:</p>
+    <ul class="bullet-list">
+    	<li>Meet and establish friendships with other single Catholics while enjoying interesting fulfilling activities.</li>
+    	<li>Get reduced admission prices at club events.</li>
+    	<li>Receive the local club’s newsletter, which contains event and other club information.</li>
+    	<li>Voting privileges.</li>
+    	<li>Eligible to attend enjoyable CAC vacations: the annual CACI National Convention, and CAC Regional Weekends.</li>
+    	<li>Receive The Communiqué, the CACI newsletter, by mail.</li>
+    	<li>Attend activities of other CAC’s at member rates when you’re in their area.</li>
+    </ul>
+    <p><strong>Meet the criteria for CAC membership, below?</strong> Become a member of a local CAC chapter, and start
+    enjoying the company of other Catholic singles of similar values! <a href="#local-clubs" class="btn btn-default" 
+    role="button">Local CACs <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-7">
+    <h3 id="criteria" class="heading-linked-to">Membership criteria –<br>What do CAC members have in common?</h3>
+    <p class="colored-bold before-list">CAC membership is comprised of men and women who are:</p>
+    <ul class="bullet-list">
+    	<li>Single.</li>
+    	<li>Catholic.</li>
+    	<li>Free to marry in the Catholic Church.</li>
+    	<li>At least 21 years of age.</li>
+    	<li>Educated with a four-year or two-year college degree or equivalent, or registered nurse.</li>
+    </ul>
+    <p class="small">(Specific requirements may vary – please check with the chapter of interest to you. An alternative 
+    form of membership may be available to singles who don't meet all the above qualifications.)</p>
+  </div>
+  <div class="col-sm-5">
+    <img src="media/cac-events-b.jpg" class="img-responsive img-rounded center-block" alt="More CAC Events" style="margin-top:3rem">
+  </div>
+</div>
+
+</div> <!-- /membership -->
+
+<div id="at-large" class="container-fluid">
+
+<h3>At-Large Membership</h3>
+
+<p class="single-column"><strong>Don’t live near a local CAC chapter and meet CAC membership criteria?</strong> 
+You still have the opportunity be a part of the nationwide CAC community and take part in its activities by becoming 
+a CAC At-Large Member.</p>
+
+<div id="at-large-hidden" class="collapsed-content collapse row">
+  <div class="col col-sm-7">
+    <h4 class="text-left">Benefits of At-Large Membership:</h4>
+    <ul class="bullet-list">
+    	<li>Enjoy CACI National Conventions and CAC Regional Weekends. Vacation with fellow CAC members throughout the country.</li>
+    	<li>Attend activities of a local CAC at member rates when you’re in their area.</li>
+    	<li>Receive The Communiqué, the CACI Newsletter, by mail.</li>
+    	<li>Receive a Membership Card that identifies you as a CAC member.</li>
+    	<li>Meet single Catholic college graduates from all over the USA.</li>
+    	<li>Receive direct mailings of National Convention information and registration forms.</li>
+    	<li>Receive direct mailings of all Regional Weekend information.</li>
+    	<li>Possible opportunity to become an active part of the CACI Board.</li>
+    </ul>
+  </div>
+  <div class="col col-sm-5">
+    <div class="well text-center">
+      <h4>Apply for At-Large Membership:</h4>
+      <a href="downloads/at-large-member-application.pdf" target="_blank" class="btn btn-default" role="button">
+      <span class="glyphicon glyphicon-file"></span> Get application</a>
+    </div>
+    <div class="well text-center">
+      <h4>Find out more:</h4>
+      <span class="small">Contact At-Large Membership Coordinator 
+      <span ng-controller="contactDataCtrl">{{ getPersonField('At-Large Membership') }}</span>:</span><br>
+      <contact-button recipient="'At-Large Membership'" button-text="Contact At-Large Membership"></contact-button>        
+    </div>
+  </div>
+</div>
+
+<p class="single-column"><a id="moreless-atlarge" href="#at-large-hidden" class="btn btn-default" data-toggle="collapse" 
+role="button">Show more <span class="glyphicon glyphicon-chevron-down"></span></a></p>
+
+</div> <!-- /at large -->
+
+<div id="travel" class="container-fluid">
+
+<h2>Travel</h2>
+
+<h4>CACI National Convention &amp; Regional Weekends</h4>
+
+<div class="row">
+
+  <div class="col col-md-6">
+    <h3>About CACI Travel</h3>
+    <p>Each year, several travel opportunities are available exclusively to CAC members. Join
+    fellow CACers throughout the US, for tours, sporting events, dinner-dances, liturgies,
+    seminars, parties, and more.</p>
+    <h4>National Convention</h4>
+    <p>All CAC members in good standing are invited to the annual CACI National Convention, a
+    weeklong gathering of more than a hundred CAC members from around the US. A varying North
+    American location of particular interest to CAC travelers is selected each year.</p>
+    <p>Begin each day with breakfast. Then join a sightseeing tour, or participate in a sporting
+    event such as tennis, volleyball, or golf. Later in the afternoon, attend a celebration of the
+    Mass. Afterwards, enjoy a cocktail hour and catered dinner, followed by a dance. Close out the
+    night with an after-hours party. Do all this while sharing the warmth of companionship and good
+    cheer with fellow Catholic singles who are CAC members.</p>
+    <img src="media/GreatRiverRoad.jpg" class="img-responsive img-rounded hidden-xs pull-left" alt="The Great River Road" style="max-width:50%">
+    <img src="media/GreatRiverRoad.jpg" class="img-responsive img-rounded visible-xs-block center-block" alt="The Great River Road">
+    <p>CACI also holds its election of officers and conducts its annual business meeting at the
+    Convention. Seminars are also held to improve leaders’ ability to run their clubs.</p>
+    <p>For many CACers, this Annual Vacation is the highlight of the year! Experience it for
+    yourself.</p>
+    <div class="clearfix"></div>
+    <h4>Regional Weekends</h4>
+    <p>Regional Weekends provide additional vacation opportunities for CACers, beyond the National
+    Convention. CAC chapters host, for their Region, a Weekend full of activities of interest
+    to Catholic singles. All CAC members may attend any Regional Weekend.</p>
+
+    <div class="row">
+      <div class="col col-sm-6">
+        <h4>Past Conventions</h4>
+        <div class="text-center">
+          <div id="past-conv-list" class="collapsed-content collapse text-left" ng-controller="pastConvCtrl">
+            <div ng-repeat="conv in convList">
+              {{ conv.year + ' – ' + conv.place }}
+              <a ng-href="{{ conv.infoLoc }}" target="_blank" class="btn btn-default btn-sm" ng-if="conv.infoLoc">Info</a>
+            </div>
+          </div>
+          <a id="show-past-conv" href="#past-conv-list" class="btn btn-default" data-toggle="collapse" 
+            role="button">Show past Conventions <span class="glyphicon glyphicon-chevron-down"></span></a>
+        </div>
+        <h4>Travel inquiry/suggestion?</h4>
+        <div class="text-center" style="margin-bottom:1.5rem">
+          <contact-button recipient="'General CACI'" button-text="Contact us"></contact-button>
+        </div>
+      </div>
+      <div class="col col-sm-6">
+        <img src="media/GlacierWaterton.jpg" class="img-responsive img-rounded center-block" alt="Glacier Waterton">
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-md-6">
+
+    <h3 id="travel-calendar-sect" class="heading-linked-to">Travel Calendar</h3>
+    <table class="table table-hover table-striped" id="travel-calendar" ng-controller="travelCtrl">
+    <tr>
+      <th>Date</th>
+      <th>Event</th>
+      <th>Location</th>
+      <th>Info</th>
+    </tr>
+    <tr ng-repeat="event in travelList">
+      <td>{{ event.date }}</td>
+      <td>{{ event.event }}</td>
+      <td><strong>{{ event.location }}</strong></td>
+      <td><a ng-href="{{ event.infoloc }}" target="_blank" class="btn btn-default" role="button" ng-if="event.infoloc">
+      <span class="glyphicon glyphicon-info-sign"></span></a></td>
+    </tr>
+    </table>
+
+    <div id="this-convention">
+      <!-- Insert info on Convention -->
+      <div id="convention-insert" ng-include="'this-convention.html'"></div>
+      <!-- List of forms for year -->
+      <p><br>
+        <a ng-href="#" class="btn btn-default" data-toggle="modal" data-target="#downloadModal">
+        <span class="glyphicon glyphicon-file"></span> All Convention &amp; Weekend Forms</a>
+      </p>
+    </div>
+
+  </div>
+
+</div> <!-- /row -->
+
+</div> <!-- /travel -->
+
+<div id="newsletter" class="container-fluid">
+
+<h2>Newsletter</h2>
+
+<div class="row">
+  <div class="col col-sm-2">
+    <img class="img-responsive center-block" src="media/communique-w200.png" alt="paper &amp; quill" style="max-height:10rem">
+  </div>
+  <div class="col col-sm-5">
+    <p>CACI publishes <em><strong>The Communiqué</strong></em>, a newsletter that CAC members receive by mail about twice
+    a year. It contains information on CACI, the National Convention, Regional Weekends and other
+    Regional affairs, and other information of interest to CAC members.</p>
+  </div>
+  <div class="col col-sm-5" ng-controller="newsletterCtrl">
+    <div class="well">
+      <div class="center-block" style="margin:0 auto; width:26rem">
+        <h4 class="text-left">Read <em>The Communiqué</em></h4>
+        <a ng-href="{{ 'newsletter/' + newsletter.filename }}" target="_blank" class="btn btn-default" role="button" 
+          ng-repeat="newsletter in newsletterList | limitTo : 1"><span class="glyphicon glyphicon-file"></span> Get current issue (PDF)</a>
+        <div class="dropdown" style="margin-top:1rem">
+          <span class="small">Get PDF copies of previous issues:</span><br>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-file"></span> Select an issue to view <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu scrollable-menu" role="menu">
+            <li ng-repeat="newsletter in newsletterList">
+              <a ng-href="{{ 'newsletter/' + newsletter.filename }}" target="_blank">{{ newsletter.issue }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!-- /newsletter -->
+
+<div id="scholarship" class="container-fluid">
+
+<h2>Scholarship Fund</h2>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-1">
+    <p>CACI is happy to help deserving individuals advance their education, thanks to a gift from
+    the estate of former CACI President Ed Webb, and from donations collected at the CACI National
+    Convention and Regional Weekends as well as other supportive individuals.</p>
+
+    <div id="scholarship-hidden" class="collapsed-content collapse">
+      <p>Most CAC members are college graduates and view education as a positive factor in shaping
+      lives. Thus, as a charitable endeavor, CACI has established the Catholic Alumni Clubs
+      International Scholarship Fund, officially named the <strong>Edward T. Webb Memorial
+      Fund</strong>.</p>
+      <p>Annually, each of the three CACI Regions directs the Fund to provide financial aid at a
+      university, high school, elementary school, or other educational institution, which is selected
+      by vote of that Region’s member clubs. Each member Club may nominate one school. Anyone wishing
+      to recommend a school for consideration should contact the president of the Catholic Alumni Club
+      in the geographic area of the school</a>.</p>
+      <h4>History of the Fund</h4>
+      <p>Ed Webb was the first president of the association that is now Catholic Alumni Clubs
+      International. In his will, Ed bequeathed money to a CACI Scholarship Fund. Ed's will was opened
+      in 2005. The following year, at the 2006 National Convention, the CACI Board of Directors
+      established the Edward T. Webb Memorial Fund. CACers attending the Convention donated the first
+      contributions into the Fund. Shortly thereafter, the Fund received a distribution from Ed's
+      estate. Since 2007, the Fund has been annually assisting many students through scholarship awards
+      to a number of educational institutions.</p>
+      <h4>How is the Fund governed?</h4>
+      <p>The Fund is directed by an Administrator working in association with two Supervisors. The CACI
+      President appoints all three, and may serve as one of the two Supervisors. These appointments run
+      concurrent with the President's term of office.</p>
+      <h4>Inquiries &amp; Comments:</h4>
+      <p>Contact CACI Scholarship Fund Administrator 
+      <span ng-controller="contactDataCtrl">{{ getPersonField('Scholarship Fund Administrator') }}</span>:
+      <contact-button recipient="'Scholarship Fund Administrator'" button-text="Contact Scholarship Fund"></contact-button></p>
+    </div>
+
+    <p>
+      <a id="moreless-scholarship" href="#scholarship-hidden" class="btn btn-default" data-toggle="collapse" 
+      role="button">Show more <span class="glyphicon glyphicon-chevron-down"></span></a>
+    </p>
+
+  </div>
+  <div class="col-sm-2">
+    <img class="img-responsive center-block" src="media/scholarship.svg" alt="graduation cap" style="max-height:15rem; margin-top:-3rem">
+  </div>
+</div>
+
+</div> <!-- /scholarship -->
+
+<div id="officers" class="container-fluid">
+
+<h2>Officers</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h4>CACI Executive Board</h4>
+    <p>Catholic Alumni Clubs International is governed by its Board of Directors, composed of the Executive Committee
+    (the Officers and the Immediate Past President), and the presidents and delegates of individual
+    CACs. Officers are elected annually at the National Convention (typically in July or August) and
+    assume office for one year beginning October 1.</p>
+    <h4>Regional Officers</h4>
+    <p>The Association of all Catholic Alumni Clubs is divided geographically into three regions. Each region is 
+    administered by a Regional Vice President.</p>
+    <img class="img-responsive center-block" src="media/association-150.png" alt="association">
+  </div>
+  <div class="col-sm-6" ng-controller="contactDataCtrl">
+    <h4 id="officers-list" class="heading-linked-to">
+    <!-- <span ng-repeat="year in contactData | limitTo : 1">{{ year.title }}</span> Officers</h4> --> <!-- Year is first row in contact.csv -->
+    <span>{{ getPersonField('year') }}</span> Officers</h4>
+    <table id="officers-table" class="table table-hover table-condensed table-striped">
+      <tr>
+        <th>Office</th>
+        <th>Name <span class="small">(Club)</span></th>
+        <th>Contact</th>
+      </tr>
+      <tr ng-repeat="officer in officersList">
+        <td>{{ officer.title }}</td>
+        <td>{{ officer.person }} <span class="small">({{ officer.affil }})</span></td>
+        <td>
+          <div ng-if="officer.person">
+            <contact-button recipient="officer.title" button-text=""></contact-button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</div> <!-- /officers -->
+
+<div id="contact" class="container-fluid">
+
+<h2>Contact Us</h2>
+
+<div id="contact-content">
+  <p>
+    <span class="glyphicon glyphicon-envelope"></span> 
+    Have an inquiry <strong>specific to any of the above</strong> sections? 
+    <strong>Check there first to contact.</strong>
+  </p>
+  <p>
+    <span class="glyphicon glyphicon-envelope"></span> 
+    Want to <strong>contact an officer</strong>? 
+    Go to the <a href="#officers-list"><strong>Officers list</strong></a>.
+  </p>
+  <p>
+    <span class="glyphicon glyphicon-envelope"></span>
+    Have an inquiry <strong>not addressed anywhere else</strong> on this site? 
+    <contact-button recipient="'General CACI'" button-text="Contact CACI"></contact-button>
+  </p>
+  <p class="small text-center">
+    Inquiries regarding content of this website: 
+    <a href="#contact" ng-controller="contactFormPromptCtrl" ng-click="openModal('Webmaster')">contact the Webmaster</a>.
+  </p>
+</div>
+
+</div> <!-- /contact -->
+
+<!-- /MAIN -->
+
+<!-- FOOTER -->
+<footer>
+  <img src="media/cac-logo-w100.png" alt="CAC Logo">
+  <div class="container-fluid">
+    <div class="row" style="max-width: 60rem">
+      <div class="col col-sm-4 col-sm-offset-2 col-md-6 col-md-offset-0">
+        <div class="row">
+          <div class="col col-md-6">
+            <a href="#home">Home</a><br>
+            <a href="#about">About Us</a><br>
+            <a href="#about" class="indent">Who We Are</a><br>
+            <a href="#what-we-do" class="indent">What We Do</a>
+          </div>
+          <div class="col col-md-6">
+            <a href="#local-clubs">Local CACs</a><br>
+            <a href="#membership">Membership</a><br>
+            <a href="#membership" class="indent">Benefits</a><br>
+            <a href="#criteria" class="indent">Criteria</a><br>
+            <a href="#at-large" class="indent">At-Large</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-sm-4 col-md-6 col-md-offset-0">
+        <div class="row">
+          <div class="col col-md-6">
+            <a href="#travel">Travel</a><br>
+            <a href="#travel" class="indent">About</a><br>
+            <a href="#travel-calendar-sect" class="indent">Calendar</a><br>
+            <a href="#this-convention" class="indent">Convention</a><br>
+            <a ng-href="#" data-toggle="modal" data-target="#downloadModal" class="indent">Forms/Info</a>
+          </div>
+          <div class="col col-md-6">
+            <a href="#newsletter">Newsletter</a><br>
+            <a href="#scholarship">Scholarship Fund</a><br>
+            <a href="#officers">Officers</a><br>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center small">© {{ thisYear }} Catholic Alumni Clubs International. Website by John Hredzak.</div>
+</footer>
+<!-- /FOOTER -->
+
+<!--  MODALS  -->
+<!-- This-Convention Modal -->
+<div ng-include="'modal-thisconvention.html'"></div>
+<!-- Download Modal -->
+<div ng-include="'modal-download.html'"></div>
+<!-- Contact (Mail) Form Modal -->
+<div ng-include="'modal-contact.html'"></div>
+
+<!-- LOAD SCRIPTS AFTER HTML -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="angscript.js"></script>
+<script src="bsscript.js"></script>
+</body>
+</html>

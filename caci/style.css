@@ -1,0 +1,347 @@
+/* CACI.org Styles */
+
+/* Elements and Styling (not section-specific) */
+html {
+  font-size: 0.625em;
+}
+body {
+  font: 1.6rem Lato, sans-serif;
+  line-height: 1.6;
+}
+p {
+  margin-bottom: 2.0rem;
+}
+p.before-list {
+  margin-bottom: 1.0rem;
+}
+a {
+  color: #409040;
+}
+a:hover, a:focus {
+  color: #287028;
+}
+ul.bullet-list {
+  margin-bottom: 2.0rem;
+}
+ul.bullet-list li {
+  list-style-type: square;
+  margin-left: 0;
+  padding-left: 0;
+}
+img {
+  margin: 0.5rem;
+  max-height: 30rem;
+}
+h1 {
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+h2, h3, h4 {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 2.0rem 0;
+  padding-top: 0.5rem;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0098c8;
+  margin: 1.5rem 0;  
+}
+h4 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 1.0rem 0;
+}
+.heading-linked-to {
+  padding-top: 5.0rem;
+  margin-top: -3.5rem;
+  background-clip: content-box;
+}
+form label {
+  text-align: right;
+}
+button.close {
+  font-size: 3.0rem;
+}
+.container-fluid {
+  padding: 2.5rem 4%;
+}
+.btn {
+  font-size: 1.4rem;
+}
+.btn-sm {
+  font-size: 1.2rem;
+}
+p .btn {
+  margin-left: 0.4rem;
+}
+.btn-default {
+  background-color: #deebd1;
+}
+.btn-info {
+  background-color: #0098c8;
+}
+.single-column {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+}
+.well {
+  background-color: #e9e9e9;
+}
+.well h4 {
+  margin-top: 0;
+}
+.scrollable-menu {
+  height: auto;
+  max-height: 20rem;
+  overflow-x: hidden;
+}
+.bold-italic {
+   font-weight: bold;
+   font-style: italic;
+}
+.colored-bold {
+  color: #0098c8;
+  font-weight: bold;
+}
+.collapsed-content {
+  margin-top: -20rem;
+  border-top: 20rem solid transparent;
+  background-clip: padding-box;
+}
+
+/* Main, Section-specific */
+#activities-list .row div {
+  margin: 1.5rem 0;
+}
+#what-we-do .glyphicon {
+  color: #0098c8;
+  font-size: 3.6rem;
+}
+#what-we-do a .glyphicon {
+  color: inherit;
+  font-size: inherit;
+}
+#clubs-list .list-group-item {
+  margin: 0.3rem 0;
+  padding: 0.4rem;
+  color: #333;
+  background-color: #e6f0db;
+}
+#clubs-list .disabled {
+  background-color: #e8e8e8;
+}
+#at-large h3 {
+  padding-top: 0.5rem;
+}
+#past-conv-list .btn {
+  padding: 0 0.4em;
+  margin-left: 0.6em;
+}
+#travel-calendar {
+  background-color: #ecf4e4;
+}
+#travel-calendar td, #travel-calendar th {
+  padding: 0.5em 0.2em;
+}
+#travel-calendar .btn {
+  padding: 0.15em 0.6em;
+}
+#officers-table td, #officers-table th {
+  padding: 0.3em 0.2em;
+}
+#officers-table .btn {
+  padding: 0 0.7em;
+  margin-left: 0.8em;
+}
+#this-convention {
+  background-color: #ffffd0;
+  padding: 2.0rem 1.0rem 0.01rem;
+  margin-top: -3.0rem;
+  border-top: 4.0rem solid transparent;
+  background-clip: padding-box;
+}
+#contact-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+#contact-content .glyphicon-envelope {
+  color: #0098c8;
+  font-size: 2.0rem;
+  margin-right: 1.5rem;
+}
+
+/* Main - Section Backgrounds */
+#about, #local-clubs, #at-large, #newsletter, #officers {
+  background-color: #ecf4e4;
+}
+#what-we-do, #membership, #travel, #scholarship, #contact {
+  background-color: #f3efeb;
+}
+
+/* Navbar */
+.navbar {
+  margin: 0;  /* Default is 20px */
+  background-color: #666;
+  z-index: 9999; /* Is this for browser quarkiness? */
+  border: 0; /* Take this out if 1px bottom border desired */
+  font: 13px Lato, sans-serif !important;
+  line-height: 1.42857143 !important;
+  border-radius: 0;
+}
+.navbar .container-fluid {
+  padding: 0 2%;
+}
+.navbar .navbar-toggle {
+  background-color: #fff !important;
+  color: #666 !important;
+  border-color: transparent;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar li a:hover, .navbar li.active a {
+  color: #fff !important;
+  background-color: #0098c8 !important;
+}
+.navbar .dropdown-toggle, .navbar .dropdown-menu {
+  background-color: #666 !important;
+}
+
+/* Header/Jumbotron */
+header {
+  padding-top: 5.0rem;
+  background-image: url('media/header-4x3.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box;
+}
+#home {
+  position: relative;
+  margin-top: -5.0rem;
+  background-color: rgba(0,0,0,0.5);
+/*   background-color: rgba(32,32,32,0.65); */
+}
+.jumbotron {
+  min-height: 70rem;
+  padding: 6.0rem 0 5.0rem;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+}
+.jumbotron .subtitle-1 {
+  /* font-size: 20px; */
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 3.0rem 0 4.0rem;
+}
+.jumbotron .subtitle-2 {
+  /* font-size: 20px; */
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  word-spacing: 1.5rem;
+  margin-bottom: 2.0rem; /* new */
+}
+.jumbotron .tagline {
+  font-family: Merienda One, Cursive;
+  /* font-size: 17px; */
+  font-size: 2.0rem;
+  position: absolute;
+  bottom: 3.0rem;
+  text-align: center;
+  width: 100%;
+}
+.jumbotron .subtitle-1, .jumbotron .tagline {
+  color: #ff5;
+}
+/* .jumbotron .collage {
+  margin: 0.5em 0;
+  opacity: 0.5;
+} */
+.jumbotron .collage img {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #666;
+  color: #fff;
+  font-size: 1.4rem;
+}
+footer .container-fluid {
+  padding: 1.5rem 0;
+  margin-left: 10rem;
+}
+footer .row {
+  margin: 0 auto;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover, footer a:focus {
+  color: #ff6;
+}
+footer .indent {
+  margin-left: 1em;
+}
+footer img {
+  float: left;
+  margin: 2.0rem 0 0 1.0rem;
+}
+
+/* Modals */
+.modal {
+  top: 4.0rem;
+}
+.modal-header {
+  background-color: #ddd;
+}
+#conv-modal .modal-body {
+  font-size: 0.9em;
+}
+.help-block, .help-block p {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+#contactFeedbackMsg {
+  color: #00f;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2em;
+  min-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url('media/header-3x4.jpg');
+  }
+  .jumbotron {
+    min-height: 60rem;
+  }
+  .jumbotron .subtitle-1 {
+    font-size: 1.8rem;
+  }
+  .jumbotron .subtitle-2 {
+    font-size: 1.8rem;
+  }
+  .jumbotron .tagline {
+    font-size: 1.5rem;
+  }
+}
