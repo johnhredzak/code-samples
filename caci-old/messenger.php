@@ -8,8 +8,8 @@
 
 <script type="text/javascript">
 // Encode action attribute to avoid potential abuse
-entAct = '/mes'+'seng'+'er.p'+'hp';
-subAct = '/sen'+'dscr'+'ipt.p'+'hp';
+entAct = './mes'+'seng'+'er.p'+'hp';
+subAct = './sen'+'dscr'+'ipt.p'+'hp';
 </script>
 
 <style type="text/css">
@@ -99,6 +99,13 @@ div.showMessageText {
 $prohibitFile = "./data/badmsgstrings.txt";
 $messengerTop = "<div id=\"topbar\">Messenger - Catholic Alumni Clubs International</div>
 <div id=\"heading\">Compose your message to CAC here:</div>";
+$inpName = '';
+$inpEmail = '';
+$cbEmailNone = '';
+$cbEmailNoneChecked = '';
+$inpEmailAgain = '';
+$inpSubject = '';
+$taMessage = '';
 
 if (!isset($_POST['posted']))
 {
@@ -116,7 +123,7 @@ else
   $recipient = $_POST['recipient'];
   $inpName = $_POST['inpName'];
   $inpEmail = $_POST['inpEmail'];
-  $cbEmailNone = $_POST['cbEmailNone'];
+  if (isset($_POST['cbEmailNone'])) $cbEmailNone = $_POST['cbEmailNone'];
   if ($cbEmailNone == "noEmail")
     $cbEmailNoneChecked = " checked";
   else
@@ -127,9 +134,9 @@ else
 
   // Change double-quote to two single-quotes, for inpName inpSubject and taMessage fields
   // to enable embedding text within input control values
-  $inpName = ereg_replace('"', "''", $inpName);
-  $inpSubject = ereg_replace('"', "''", $inpSubject);
-  $taMessage = ereg_replace('"', "''", $taMessage);
+  $inpName = preg_replace('/"/', "''", $inpName);
+  $inpSubject = preg_replace('/"/', "''", $inpSubject);
+  $taMessage = preg_replace('/"/', "''", $taMessage);
 
   try
   {
@@ -148,10 +155,10 @@ else
 
         case "inpEmail":
 //          $emailRegexp = "^[^@ ]+@[^@ ]+\.\w{2,6}$";
-          $emailRegexp = "^[^@ ]+@[^@ ]+\.[^@ \.]+$";
+          $emailRegexp = "/^[^@ ]+@[^@ ]+\.[^@ \.]+$/";
           if ($len == 0 && !$_POST['cbEmailNone'])
             throw new Exception("Enter your E-mail Address or check the \"No e-mail address\" box.");
-          else if ($len > 0 && !ereg($emailRegexp, $value) || $len > 60)
+          else if ($len > 0 && !preg_match($emailRegexp, $value) || $len > 60)
             throw new Exception("E-mail Address invalid. Re-enter.");
           break;
 
@@ -189,7 +196,7 @@ else
   }
 }  // END: if...else (!isset($_POST['posted']))
 
-if (!isset($_POST['posted']) || is_object($e))
+if (!isset($_POST['posted']) || isset($e))
 // Initial display of this page? Or subsequent display resulting from error in user-subitted data?
 
 {
@@ -288,8 +295,8 @@ if ($file)
 <?php
 
 // inpName field - Remove "," and  ";" (problems when sending e-mail with those characters in name).
-$nameRegexp = "[,;]";
-$inpName = ereg_replace($nameRegexp, "", $inpName);
+$nameRegexp = "/[,;]/";
+$inpName = preg_replace($nameRegexp, "", $inpName);
 
 // taMessage field - Strip any whitespace at beginning and end of message
 // (a newline character is added within the <form> for output readability).

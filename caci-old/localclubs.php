@@ -19,7 +19,6 @@
 // *** Read person and chapter data from file /data/contactdata.csv ***
 
 $data_file = "./data/contactdata.csv";
-$fileErrorMsg = "";
 $fp = @fopen($data_file, "r");
 if ($fp) {
 
@@ -228,7 +227,7 @@ He'll work closely with you to get a CAC in your area up and running.</p>
 <!-- !!! NOTE: To update info in this table, see above instructions !!!
      !!! DO NOT MAKE EDITS HERE !!! -->
 
-<?php if ($fileErrorMsg) echo $fileErrorMsg; ?>
+<?php if (isset($fileErrorMsg)) echo $fileErrorMsg; ?>
 
 <div id="clubRegLeft">
 

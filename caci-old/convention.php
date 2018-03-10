@@ -193,7 +193,9 @@ else {  // Could not open file
 
   <ul class="singleSpace">
 <!-- ** Add link for last convention info here. ** -->
-<!--    <li><a href="conv201N.php" target="_blank">201N - City, State</a></li> -->    
+<!--    <li><a href="conv201N.php" target="_blank">201N - City, State</a></li> -->
+    <li><a href="convention/2017/Convention-2017-brochure.pdf" target="_blank">2017 - New Orleans, LA</a></li>
+    <li><a href="convention/2016/Convention-2016-info.pdf" target="_blank">2016 - Billings, MT</a></li>
     <li><a href="conv2015.php" target="_blank">2015 - Providence, Rhode Island</a></li>
     <li><a href="conv2014.php" target="_blank">2014 - Gatlinburg, Tennessee</a></li>
     <li><a href="conv2013.php" target="_blank">2013 - Portland, Oregon</a></li>    

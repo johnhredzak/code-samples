@@ -18,7 +18,6 @@
 // *** Read officer data from file /data/contactdata.csv ***
 
 $contact_file = "./data/contactdata.csv";
-$fileErrorMsg = "";
 $fp = @fopen($contact_file, "r");
 if ($fp) {
   do $record = fgetcsv($fp, 1000, ",");
@@ -124,7 +123,7 @@ include("./inc_topcode.php");
 // *** Generate main content of table from data file
 // NOTE: To update info in this table, see above instructions.
 // !! DO NOT MAKE EDITS HERE !!
-if ($fileErrorMsg)
+if (isset($fileErrorMsg))
   echo $fileErrorMsg;
 else {
   foreach ($officersTable as $office => $officerData)
